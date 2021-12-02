@@ -9,5 +9,6 @@ class PostForm(forms.ModelForm):
             'title',
             'description',
             'dept_name',
-            'requirement'
+            'requirement',
+            'date_posted'
         ]
