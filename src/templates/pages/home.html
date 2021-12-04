@@ -7,4 +7,19 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <p class="lead">A Platform To Find Other Great Minds.</p>
 </div>
+
+  {% for post in posts %}
+    <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ post.yourname }}</a>
+            <small class="text-muted">{{ post.date_posted}}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+          <p class="article-content">{{ post.description }}</p>
+          <h2><a class="article-title" href="#">{{ post.dept_name }}</a></h2>
+          <p class="article-content">{{ post.requirement }}</p>
+        </div>
+    </article>
+  {% endfor %}
 {% endblock content %}

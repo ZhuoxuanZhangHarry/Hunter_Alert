@@ -1,9 +1,16 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render
 from .forms import PostForm
+from .models import Post
 
 class HomePageView(TemplateView):
     template_name = 'pages/home.html'
+
+def HomePageShowPosts(request):
+    context = {
+        'posts': Post.objects.all()
+    }
+    return render(request, 'pages/home.html', context)
 
 
 class AboutPageView(TemplateView):
