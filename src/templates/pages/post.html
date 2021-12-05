@@ -3,7 +3,12 @@
 {% block title %}post page{% endblock %}
 
 {% block content %}
-<h1>Post page</h1>
+<body>
+    <h1 style="text-align:center">Post Page</h1>
+    <br>
+    <h5>Let's post your work!</h5>
+    <br>
+</body>
 
 <form method='POST'> {% csrf_token %}
 {{form.as_p}}
