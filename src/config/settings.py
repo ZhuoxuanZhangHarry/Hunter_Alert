@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 # GENERAL
 # ------------------------------------------------------------------------------
@@ -31,8 +32,8 @@ INSTALLED_APPS = [
     'debug_toolbar',
 
     # Local
-    'accounts',
-    'pages',
+    'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
 ]
 
 # MIDDLEWARE
@@ -63,7 +64,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
