@@ -7,11 +7,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 def HomePageView(request):
-    post = Post.objects.all()
-    myFilter = PostFilters(request.GET, queryset=post)
+    posts = Post.objects.all()
+    myFilter = PostFilters(request.GET, queryset=posts)
+    posts = myFilter.qs
     context = {
-        
-         'myFilter' : myFilter
+        'posts' : posts,
+        'myFilter' : myFilter
      }
 
     return render(request, 'pages/home.html', context)
