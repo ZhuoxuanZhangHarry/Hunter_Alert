@@ -1,10 +1,5 @@
 from django.urls import path
-
-<<<<<<< Updated upstream
-from .views import HomePageView, AboutPageView, PostPageView, HomePageShowPosts, LogoutView
-=======
-from .views import HomePageView, AboutPageView, PostPageView
->>>>>>> Stashed changes
+from .views import HomePageView, AboutPageView, PostPageView, LogoutView
 
 urlpatterns = [
     path('', HomePageView, name='home'),
