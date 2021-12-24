@@ -29,15 +29,15 @@
 			<tr>
 				<th>Title</th>
 				<th>Department</th>
-				<th>Requirement</th>
+				<th>Description</th>
 			</tr>
 
 			{% for post in posts %}
 
 			<tr>
 				<td>{{post.title}}</td>
-				<td>{{order.dept_name}}</td>
-				<td>{{order.description}}</td>
+				<td>{{post.dept_name}}</td>
+				<td>{{post.description}}</td>
 			</tr>
 			{% endfor %}
 
