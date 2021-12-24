@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/zhuoxuanzhang/Documents/djangox-master/venv"
+VIRTUAL_ENV="/Users/zhuoxuanzhang/Documents/Hunter_Alert/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

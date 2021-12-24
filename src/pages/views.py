@@ -2,16 +2,18 @@ from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
 from .forms import PostForm
 from .models import Post
+from .filter import PostFilters
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-class HomePageView(TemplateView):
-    template_name = 'pages/home.html'
-
-def HomePageShowPosts(request):
+def HomePageView(request):
+    post = Post.objects.all()
+    myFilter = PostFilters(request.GET, queryset=post)
     context = {
-        'posts': Post.objects.all()
-    }
+        
+         'myFilter' : myFilter
+     }
+
     return render(request, 'pages/home.html', context)
 
 
