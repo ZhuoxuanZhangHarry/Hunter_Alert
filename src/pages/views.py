@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from .forms import PostForm
 from .models import Post
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 class HomePageView(TemplateView):
     template_name = 'pages/home.html'
@@ -17,6 +18,7 @@ def HomePageShowPosts(request):
 class AboutPageView(TemplateView):
     template_name = 'pages/about.html'
 
+@login_required
 def PostPageView(request):
     form = PostForm(request.POST or None)
     if form.is_valid():
@@ -28,3 +30,7 @@ def PostPageView(request):
         'form': form
     }
     return render(request, "pages/post.html", context)
+
+
+class LogoutView(TemplateView):
+    template_name = 'account/logout.html'
