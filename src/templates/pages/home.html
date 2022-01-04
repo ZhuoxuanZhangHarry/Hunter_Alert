@@ -38,6 +38,10 @@
 				<td>{{post.title}}</td>
 				<td>{{post.dept_name}}</td>
 				<td>{{post.description}}</td>
+				<td>
+					<a class="btn" href="{% url 'detail' post.id %}">View Post Details</a>
+				</td>
+				
 			</tr>
 			{% endfor %}
 

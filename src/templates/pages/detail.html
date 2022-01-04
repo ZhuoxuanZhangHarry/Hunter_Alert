@@ -1,0 +1,19 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="main">
+
+    <h2>Post Details:</h2>
+    <hr>
+    <p><b>YourName: </b> <br> {{ detail.yourname }} <hr> </p>
+    <p><b>Title:</b> <br> {{ detail.title }} <hr> </p>
+    <p><b>Description:</b> <br> {{ detail.description }} <hr> </p>
+    <p><b>Dept Name:</b> <br> {{ detail.dept_name }}<hr> </p>
+    <p><b>Requirement:</b> <br> {{ detail.requirement }}<hr> </p>
+    <p><b>Post Date:</b> <br> {{ detail.date_posted}}<hr> </p>
+  
+</div>
+
+{% endblock content %}

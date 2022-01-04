@@ -34,6 +34,11 @@ def PostPageView(request):
     }
     return render(request, "pages/post.html", context)
 
+def DetailView(request, detail_id):
+    detail = Post.objects.get(id=detail_id)
+    context = {'detail': detail}
+    return render(request, 'pages/detail.html', context)
+
 
 class LogoutView(TemplateView):
     template_name = 'account/logout.html'
