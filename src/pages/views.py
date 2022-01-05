@@ -23,12 +23,15 @@ class AboutPageView(TemplateView):
 
 @login_required
 def PostPageView(request):
-    form = PostForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        messages.success(request, f'Post published successfully')
-        return redirect('home')
-
+    if request.method != 'POST':
+        form = PostForm()
+    else:
+        form = PostForm(request.POST, request.FILES or None)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Post published successfully')
+            return redirect('home')
+    
     context = {
         'form': form
     }

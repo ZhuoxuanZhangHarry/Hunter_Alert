@@ -10,6 +10,7 @@ class Post(models.Model):
     dept_name = models.CharField(max_length=120, null=True)
     requirement = models.TextField(blank=False, null=True)
     date_posted = models.DateTimeField(default=timezone.now)
+    email = models.CharField(max_length=50, null=True)
 
     def __str__(self):
         return self.title
