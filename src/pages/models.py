@@ -1,9 +1,11 @@
 from django.db import models
 from django.utils import timezone
+from accounts.models import CustomUser
 
 
 class Post(models.Model):
     # blank = true -> it is required section, null = true -> attribute in database can be null
+    user = models.ForeignKey(CustomUser, null=True, on_delete=models.CASCADE)
     yourname = models.CharField(max_length=120, null=True)
     title = models.CharField(max_length=120, null=True)
     description = models.TextField(blank=False, null=True)

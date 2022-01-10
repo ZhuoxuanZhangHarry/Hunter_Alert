@@ -28,7 +28,9 @@ def PostPageView(request):
     else:
         form = PostForm(request.POST, request.FILES or None)
         if form.is_valid():
-            form.save()
+            instance = form.save(commit=False)
+            instance.user = request.user
+            instance.save()
             messages.success(request, f'Post published successfully')
             return redirect('home')
     
