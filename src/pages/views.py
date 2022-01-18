@@ -5,6 +5,8 @@ from .models import Post
 from .filter import PostFilters
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+#from django.views.generic import ListView
+#from .models import DeptList
 
 def HomePageView(request):
     posts = Post.objects.all()
@@ -47,3 +49,13 @@ def DetailView(request, detail_id):
 
 class LogoutView(TemplateView):
     template_name = 'account/logout.html'
+
+'''class DeptnameList(ListView):
+    # specify the model for list view
+    #model = DeptList
+
+    def get_dept_data(self, **kwargs):
+        deptnames = super().get_dept_data(**kwargs)
+        # Add in a QuerySet of all the books
+        deptnames['names'] = DeptList.objects.all()
+        return deptnames'''
