@@ -7,5 +7,4 @@ urlpatterns = [
     path('post/', PostPageView, name='post'),
     path('<detail_id>/', DetailView, name='detail'),
     path('logout/', LogoutView.as_view(), name = 'logout' ),
-    #path('', DeptnameList.as_view(), name='DeptnameList'),
 ]

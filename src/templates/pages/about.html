@@ -8,4 +8,40 @@
 <br>
 <p>Our goal is to build a web-app that conveniently shares group events and allows people to find desirable events to join in. We will develop a full-featured web application for posting and sharing group events of Oberlin students. Our web-app’s main page will post all event information submitted by users, which includes the text description of the event, requirement for joining, timeline of the event and which field/department it belongs to. We may also try to support uploading images later on. We will also provide filters for our main page, like searching the keyword in event description, sorting by posting time, filtering by specific department, etc. 
 </p>
+
+<br>
+<br>
+
+<!-- <p>
+    {% load static %} <img src="{% static "images/Harry.jpg" %}" alt="home" />
+</p>
+
+<p>
+    {% load static %} <img src="{% static "images/Shangchi.jpg" %}" alt="home" />
+</p>
+
+<p>
+    {% load static %} <img src="{% static "images/Yuchen.jpg" %}" alt="home" />
+</p> -->
+
+<h3 style="text-align:center">Our Team</h3>
+<br>
+
+<div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+    <div>
+        <img src ="{% static "images/Harry.jpg" %}">
+        <h5 style="text-align:center">Harry Zhang</h5>
+    </div>
+
+    <div>
+        <img src ="{% static "images/Shangchi.jpg" %}">
+        <h5 style="text-align:center">Shangchi Yuan</h5>
+    </div>
+
+    <div>
+        <img src ="{% static "images/Yuchen.JPG" %}">
+        <h5 style="text-align:center">Yuchen Wang</h5>
+    </div>
+</div>
+
 {% endblock content %}
