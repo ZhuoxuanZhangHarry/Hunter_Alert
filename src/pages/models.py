@@ -64,6 +64,7 @@ class Post(models.Model):
     description = models.TextField(blank=False, null=True)
     dept_name = models.CharField(max_length=120, choices=DeptName.choices, default=DeptName.Non_Academic)
     requirement = models.TextField(blank=False, null=True)
+    deadline = models.CharField(max_length=120, null=True)
     date_posted = models.DateTimeField(default=timezone.now)
     email = models.CharField(max_length=50, null=True)
 

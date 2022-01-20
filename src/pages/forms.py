@@ -1,4 +1,5 @@
 from django import forms
+from django.forms import ModelForm
 from .models import Post
 
 class PostForm(forms.ModelForm):
@@ -10,6 +11,7 @@ class PostForm(forms.ModelForm):
             'description',
             'dept_name',
             'requirement',
+            'deadline',
             'date_posted',
             'email'
         ]

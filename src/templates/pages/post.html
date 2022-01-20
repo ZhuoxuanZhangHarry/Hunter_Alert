@@ -10,7 +10,7 @@
     <br>
 </body>
 
-<form method='POST'> {% csrf_token %}
+<form action="" enctype="multipart/form-data" method='POST'> {% csrf_token %}
 {{form|crispy}}
 <input type='submit' value='Publish' />
 </form>
