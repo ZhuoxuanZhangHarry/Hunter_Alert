@@ -1,1 +1,1 @@
-web: gunicorn src.config.wsgi: application --log-file - --log-level debug
+web: gunicorn src/config.wsgi: application --log-file -
