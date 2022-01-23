@@ -76,30 +76,33 @@
 		
 	</div>
 	<br>
+	<div style="float:left; width:95%;">
+		<div class="row">
+			<div class="col-md">
+				<table class="table table-sm">
+					<tr>
+						<th>Title</th>
+						<th>Department</th>
+						<th>Requirement</th>
+						<th>Description</th>
+					</tr>
 
-	<div class="row">
-		<div class="col-md">
-			<table class="table table-sm">
-				<tr>
-					<th>Title</th>
-					<th>Department</th>
-					<th>Description</th>
-				</tr>
+					{% for post in posts %}
 
-				{% for post in posts %}
+					<tr>
+						<td>{{post.title}}</td>
+						<td>{{post.dept_name}}</td>
+						<td>{{post.requirement}}</td>
+						<td>{{post.description}}</td>
+						<td>
+							<a class="btn" href="{% url 'detail' post.id %}">View Post Details</a>
+						</td>
+						
+					</tr>
+					{% endfor %}
 
-				<tr>
-					<td>{{post.title}}</td>
-					<td>{{post.dept_name}}</td>
-					<td>{{post.description}}</td>
-					<td>
-						<a class="btn" href="{% url 'detail' post.id %}">View Post Details</a>
-					</td>
-					
-				</tr>
-				{% endfor %}
-
-			</table>
+				</table>
+			</div>
 		</div>
 	</div>
 </div>
