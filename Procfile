@@ -1,1 +1,1 @@
-web: gunicorn src/config.wsgi: application --log-file -
+web: cd src && gunicorn src.config.wsgi: application --log-file -
