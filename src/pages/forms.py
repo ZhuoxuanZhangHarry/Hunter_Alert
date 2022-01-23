@@ -6,12 +6,12 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = [
-            'yourname',
-            'title',
-            'description',
-            'dept_name',
-            'requirement',
-            'deadline',
-            'date_posted',
-            'email'
+            'Your_Name',
+            'Title',
+            'Description',
+            'Department',
+            'Requirement',
+            'Deadline',
+            'Date_Posted',
+            'Email'
         ]

@@ -58,15 +58,15 @@ class Post(models.Model):
 
 
     # blank = true -> it is required section, null = true -> attribute in database can be null
-    user = models.ForeignKey(CustomUser, null=True, on_delete=models.CASCADE)
-    yourname = models.CharField(max_length=120, null=True)
-    title = models.CharField(max_length=120, null=True)
-    description = models.TextField(blank=False, null=True)
-    dept_name = models.CharField(max_length=120, choices=DeptName.choices, default=DeptName.Non_Academic)
-    requirement = models.TextField(blank=False, null=True)
-    deadline = models.CharField(max_length=120, null=True)
-    date_posted = models.DateTimeField(default=timezone.now)
-    email = models.CharField(max_length=50, null=True)
+    User = models.ForeignKey(CustomUser, null=True, on_delete=models.CASCADE)
+    Your_Name = models.CharField(max_length=120, null=True)
+    Title = models.CharField(max_length=120, null=True)
+    Description = models.TextField(blank=False, null=True)
+    Department = models.CharField(max_length=120, choices=DeptName.choices, default=DeptName.Non_Academic)
+    Requirement = models.TextField(blank=False, null=True)
+    Deadline = models.CharField(max_length=120, null=True)
+    Date_Posted = models.DateTimeField(default=timezone.now)
+    Email = models.CharField(max_length=50, null=True)
 
     def __str__(self):
         return self.title

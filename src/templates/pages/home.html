@@ -90,10 +90,10 @@
 					{% for post in posts %}
 
 					<tr>
-						<td>{{post.title}}</td>
-						<td>{{post.dept_name}}</td>
-						<td>{{post.requirement}}</td>
-						<td>{{post.description}}</td>
+						<td>{{post.Title}}</td>
+						<td>{{post.Department}}</td>
+						<td>{{post.Requirement}}</td>
+						<td>{{post.Description}}</td>
 						<td>
 							<a class="button" href="{% url 'detail' post.id %}">View Post Details</a>
 						</td>
